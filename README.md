@@ -1,3 +1,3 @@
 # K_N_B
-аа
+That's K N B Russian game
  
