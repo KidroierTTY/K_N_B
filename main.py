@@ -12,53 +12,47 @@ while True:
 
     print("Я выбрал а ты?")
 
-    vibor = str(input("Выбирай из (К/Н/Б):"))
+    visor = input("Выбирай из (К/Н/Б): ")
 
-    vibor.lower()
+    visor = visor.lower()
 
     ti.sleep(1)
 
     print("Молодец просчитываю кто выиграл)")
 
-    if n == 1:
-        if vibor == "к":
-            print("Я выбрал тоже самое что и ты (К/К)")
+    if visor == "к" or visor == "н" or visor == "б":
+        if n == 1:
+            if visor == str("к"):
+                print("Я выбрал тоже самое что и ты (К/К)")
 
-        elif vibor == "н":
-            print("Я выиграл! (К/Н)")
+            elif visor == str("н"):
+                print("Я выиграл! (К/Н)")
 
-        elif vibor == "б":
-            print("Вы выиграли! (К/Б)")
+            elif visor == str("б"):
+                print("Вы выиграли! (К/Б)")
 
-        else:
+        elif n == 2:
+            if visor == str("к"):
+                print("Вы выиграли! (Н/К)")
 
-            print("Вы выбрали не правильный символ!!!")
+            elif visor == str("н"):
+                print("Я выбрал тоже самое что и ты (Н/Н)")
 
-    elif n == 2:
-        if vibor == "к":
-            print("Вы выиграли! (Н/К)")
+            elif visor == str("б"):
+                print("Я выиграл! (Н/Б)")
 
-        elif vibor == "н":
-            print("Я выбрал тоже самое что и ты (Н/Н)")
+        elif n == 3:
+            if visor == str("к"):
+                print("Я выиграл! (Б/К)")
 
-        elif vibor == "б":
-            print("Я выиграл! (Н/Б)")
+            elif visor == str("н"):
+                print("Вы выиграли! (Б/Н)")
 
-        else:
-            print("Вы выбрали не правильный символ!!!")
+            elif visor == str("б"):
+                print("Я выбрал тоже самое что и ты (Б/Б)")
 
-    elif n == 3:
-        if vibor == "к":
-            print("Я выиграл! (Б/К)")
-
-        elif vibor == "н":
-            print("Вы выиграли! (Б/Н)")
-
-        elif vibor == "б":
-            print("Я выбрал тоже самое что и ты (Б/Б)")
-
-        else:
-            print("Вы выбрали не правильный символ!!!")
+    elif visor != "к" or visor != "н" or visor != "б":
+        print("Вы выбрали не правильный символ!!!")
 
     ti.sleep(0.5)
 
